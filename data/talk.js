@@ -1,210 +1,238 @@
 let rawTalks = [
-    {
-        "autoincrement": 1,
-        "title": "scelerisque mollis.",
-        "abstract": "lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu",
-        "start": "2021-06-23 23:46:14",
-        "duration": 45,
-        "type": "WORKSHOP",
-        "speaker": 2,
-        "participants": "20, 13, 46, 41, 44, 19, 12, 25, 17, 16, 32"
-    },
-    {
-        "autoincrement": 2,
-        "title": "massa lobortis",
-        "abstract": "euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu.",
-        "start": "2021-06-24 01:23:08",
-        "duration": 90,
-        "type": "WORKSHOP",
-        "speaker": 6,
-        "participants": "31, 22, 42, 34, 35, 20, 50, 21, 18, 13, 37, 33, 23"
-    },
-    {
-        "autoincrement": 3,
-        "title": "vitae purus",
-        "abstract": "Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id,",
-        "start": "2021-06-24 04:43:33",
-        "duration": 90,
-        "type": "LIGHTNING_TALK",
-        "speaker": 7,
-        "participants": "24, 46, 39, 17, 36, 45, 21, 11, 20, 37, 44, 29, 27, 47, 16, 50, 48, 25, 30"
-    },
-    {
-        "autoincrement": 4,
-        "title": "justo sit",
-        "abstract": "ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec",
-        "start": "2021-06-22 15:03:36",
-        "duration": 45,
-        "type": "LIGHTNING_TALK",
-        "speaker": 5,
-        "participants": "17, 15, 48, 40, 12, 23, 30, 20, 45, 35, 24, 16, 36, 42, 28, 38, 49, 27, 29"
-    },
-    {
-        "autoincrement": 5,
-        "title": "eu, euismod ac, fermentum",
-        "abstract": "vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis,",
-        "start": "2021-06-23 13:05:26",
-        "duration": 90,
-        "type": "PRESENTATION",
-        "speaker": 1,
-        "participants": "36, 50, 15, 18, 33, 49, 27, 42, 34, 35, 45, 11"
-    },
-    {
-        "autoincrement": 6,
-        "title": "enim diam vel arcu.",
-        "abstract": "Duis ac arcu. Nunc mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra nibh. Aliquam ornare, libero at auctor ullamcorper, nisl arcu iaculis enim, sit amet ornare lectus",
-        "start": "2021-06-24 08:51:49",
-        "duration": 60,
-        "type": "LIGHTNING_TALK",
-        "speaker": 2,
-        "participants": "36, 20, 23, 28, 41, 25, 37, 44, 27, 19"
-    },
-    {
-        "autoincrement": 7,
-        "title": "posuere vulputate, lacus.",
-        "abstract": "cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus",
-        "start": "2021-06-23 02:36:07",
-        "duration": 45,
-        "type": "LIGHTNING_TALK",
-        "speaker": 5,
-        "participants": "41, 23, 19, 21, 14, 36, 45, 30, 35, 48, 25, 37, 34"
-    },
-    {
-        "autoincrement": 8,
-        "title": "accumsan neque et",
-        "abstract": "vitae, erat. Vivamus nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque.",
-        "start": "2021-06-25 10:16:10",
-        "duration": 45,
-        "type": "PRESENTATION",
-        "speaker": 10,
-        "participants": "14, 29, 31, 12, 16, 46, 35, 42, 15, 48, 37, 47, 33, 38, 25, 13, 20, 44, 17, 22"
-    },
-    {
-        "autoincrement": 9,
-        "title": "hymenaeos. Mauris ut",
-        "abstract": "rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et",
-        "start": "2021-06-23 18:13:30",
-        "duration": 45,
-        "type": "LIGHTNING_TALK",
-        "speaker": 2,
-        "participants": "43, 45, 15, 25, 28, 34, 19, 47, 42, 33, 49, 20, 50, 37, 24, 46, 23"
-    },
-    {
-        "autoincrement": 10,
-        "title": "blandit at, nisi. Cum",
-        "abstract": "luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis",
-        "start": "2021-06-22 08:49:20",
-        "duration": 45,
-        "type": "WORKSHOP",
-        "speaker": 9,
-        "participants": "19, 15, 35, 30, 37, 31, 42, 28, 11, 43, 45, 33, 13"
-    },
-    {
-        "autoincrement": 11,
-        "title": "adipiscing elit.",
-        "abstract": "nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus",
-        "start": "2021-06-24 04:15:02",
-        "duration": 60,
-        "type": "WORKSHOP",
-        "speaker": 2,
-        "participants": "27, 37, 38, 50, 36, 19, 12, 44, 29, 22, 32, 47, 48, 35, 17, 14, 26, 15, 16"
-    },
-    {
-        "autoincrement": 12,
-        "title": "sed dui. Fusce",
-        "abstract": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec tincidunt. Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia. Sed congue, elit sed consequat",
-        "start": "2021-06-24 13:39:46",
-        "duration": 45,
-        "type": "WORKSHOP",
-        "speaker": 1,
-        "participants": "50, 12, 21, 49, 47, 29, 16, 40, 25, 34, 17"
-    },
-    {
-        "autoincrement": 13,
-        "title": "Donec vitae erat",
-        "abstract": "Donec egestas. Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna.",
-        "start": "2021-06-24 20:08:03",
-        "duration": 45,
-        "type": "WORKSHOP",
-        "speaker": 1,
-        "participants": "12, 11, 37, 48, 31, 47, 39, 36, 18, 45, 30, 40, 15, 35, 34, 16, 46, 38, 17"
-    },
-    {
-        "autoincrement": 14,
-        "title": "nisi nibh lacinia",
-        "abstract": "egestas. Duis ac arcu. Nunc mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra nibh. Aliquam ornare, libero at auctor ullamcorper, nisl arcu iaculis enim, sit amet ornare lectus justo eu arcu.",
-        "start": "2021-06-25 11:06:52",
-        "duration": 45,
-        "type": "PRESENTATION",
-        "speaker": 4,
-        "participants": "21, 17, 39, 50, 22, 14, 34, 35, 38, 46, 42, 28, 49, 23, 29, 19, 15, 40, 31, 36"
-    },
-    {
-        "autoincrement": 15,
-        "title": "molestie tellus. Aenean egestas",
-        "abstract": "purus sapien, gravida non, sollicitudin a, malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt",
-        "start": "2021-06-24 04:51:59",
-        "duration": 60,
-        "type": "LIGHTNING_TALK",
-        "speaker": 7,
-        "participants": "36, 47, 25, 20, 27, 16, 12, 34, 11, 19, 38, 48, 28, 39, 21, 33, 50, 43, 15, 45"
-    },
-    {
-        "autoincrement": 16,
-        "title": "dolor egestas rhoncus. Proin",
-        "abstract": "Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus",
-        "start": "2021-06-24 22:05:57",
-        "duration": 45,
-        "type": "LIGHTNING_TALK",
-        "speaker": 7,
-        "participants": "31, 38, 36, 25, 12, 40, 18, 19, 33, 43, 15, 49, 34, 26, 39"
-    },
-    {
-        "autoincrement": 17,
-        "title": "Mauris non dui nec",
-        "abstract": "Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla at sem molestie sodales. Mauris blandit enim consequat purus. Maecenas libero est,",
-        "start": "2021-06-23 20:36:39",
-        "duration": 45,
-        "type": "PRESENTATION",
-        "speaker": 6,
-        "participants": "17, 47, 31, 45, 30, 50, 21, 14, 42, 19, 26, 34"
-    },
-    {
-        "autoincrement": 18,
-        "title": "sed tortor.",
-        "abstract": "Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque",
-        "start": "2021-06-23 19:59:54",
-        "duration": 45,
-        "type": "WORKSHOP",
-        "speaker": 9,
-        "participants": "26, 15, 14, 45, 38, 47, 28, 30, 17, 13, 31"
-    },
-    {
-        "autoincrement": 19,
-        "title": "dolor sit amet,",
-        "abstract": "Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec,",
-        "start": "2021-06-25 07:09:41",
-        "duration": 90,
-        "type": "WORKSHOP",
-        "speaker": 9,
-        "participants": "20, 15, 24, 16, 21, 44, 47, 38, 35, 31, 29, 40, 25"
-    },
-    {
-        "autoincrement": 20,
-        "title": "Maecenas mi",
-        "abstract": "nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla",
-        "start": "2021-06-24 11:55:51",
-        "duration": 90,
-        "type": "PRESENTATION",
-        "speaker": 6,
-        "participants": "24, 27, 45, 31, 21, 18, 13, 50, 11, 34, 40, 23"
-    }
+  {
+    id: 1,
+    title: "pede, ultrices",
+    abstract:
+      "imperdiet nec, leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim nisl elementum purus, accumsan",
+    start: "2021-06-24 17:54:06",
+    duration: 60,
+    type: "PRESENTATION",
+    speaker: 8,
+    participants: "30, 29, 34, 31, 38, 49, 28, 43, 23, 16, 14, 32, 47, 21",
+  },
+  {
+    id: 2,
+    title: "Aliquam adipiscing lobortis risus.",
+    abstract:
+      "metus. In lorem. Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames",
+    start: "2021-06-23 11:22:48",
+    duration: 45,
+    type: "LIGHTNING_TALK",
+    speaker: 7,
+    participants:
+      "20, 43, 33, 48, 34, 41, 47, 19, 11, 40, 46, 32, 35, 17, 16, 45",
+  },
+  {
+    id: 3,
+    title: "sociis natoque penatibus",
+    abstract:
+      "consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus.",
+    start: "2021-06-23 02:09:35",
+    duration: 60,
+    type: "PRESENTATION",
+    speaker: 1,
+    participants: "33, 19, 16, 44, 42, 11, 35, 26, 17, 23, 45, 39, 29",
+  },
+  {
+    id: 4,
+    title: "faucibus orci",
+    abstract:
+      "massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet",
+    start: "2021-06-23 18:25:34",
+    duration: 60,
+    type: "WORKSHOP",
+    speaker: 7,
+    participants: "42, 34, 20, 40, 13, 25, 37, 46, 45, 48, 47, 35, 23, 44, 11",
+  },
+  {
+    id: 5,
+    title: "at, nisi.",
+    abstract:
+      "odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales",
+    start: "2021-06-22 07:47:08",
+    duration: 90,
+    type: "PRESENTATION",
+    speaker: 4,
+    participants: "37, 46, 49, 12, 38, 34, 35, 44, 11, 45, 19",
+  },
+  {
+    id: 6,
+    title: "Nullam feugiat",
+    abstract:
+      "fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a nunc. In at pede.",
+    start: "2021-06-24 00:31:18",
+    duration: 60,
+    type: "PRESENTATION",
+    speaker: 4,
+    participants:
+      "43, 19, 29, 44, 32, 42, 38, 50, 15, 12, 13, 47, 34, 25, 11, 49",
+  },
+  {
+    id: 7,
+    title: "ac, feugiat non, lobortis",
+    abstract:
+      "nonummy ut, molestie in, tempus eu, ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non",
+    start: "2021-06-23 22:26:20",
+    duration: 45,
+    type: "WORKSHOP",
+    speaker: 10,
+    participants:
+      "36, 19, 31, 28, 14, 29, 49, 40, 18, 27, 23, 12, 20, 22, 46, 11, 50, 30",
+  },
+  {
+    id: 8,
+    title: "Cras sed leo.",
+    abstract:
+      "consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum.",
+    start: "2021-06-22 08:19:14",
+    duration: 45,
+    type: "PRESENTATION",
+    speaker: 6,
+    participants: "19, 21, 24, 27, 30, 20, 44, 48, 41, 36, 39, 11, 15, 28",
+  },
+  {
+    id: 9,
+    title: "mollis vitae, posuere",
+    abstract:
+      "ac turpis egestas. Fusce aliquet magna a neque. Nullam ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget",
+    start: "2021-06-24 23:58:36",
+    duration: 45,
+    type: "PRESENTATION",
+    speaker: 7,
+    participants:
+      "25, 31, 39, 12, 22, 40, 33, 37, 46, 50, 44, 49, 19, 32, 15, 14, 17",
+  },
+  {
+    id: 10,
+    title: "Etiam vestibulum massa rutrum",
+    abstract:
+      "libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis quam a felis ullamcorper viverra. Maecenas iaculis aliquet",
+    start: "2021-06-22 15:13:37",
+    duration: 45,
+    type: "WORKSHOP",
+    speaker: 6,
+    participants:
+      "34, 16, 38, 15, 39, 13, 41, 45, 25, 19, 46, 22, 31, 50, 33, 28, 48, 14",
+  },
+  {
+    id: 11,
+    title: "lorem tristique aliquet.",
+    abstract:
+      "eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Phasellus ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus.",
+    start: "2021-06-25 14:58:04",
+    duration: 90,
+    type: "WORKSHOP",
+    speaker: 7,
+    participants: "17, 39, 37, 24, 47, 38, 23, 35, 43, 32, 25, 45, 19, 44, 42",
+  },
+  {
+    id: 12,
+    title: "posuere, enim nisl elementum",
+    abstract:
+      "Donec porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent",
+    start: "2021-06-24 06:46:19",
+    duration: 60,
+    type: "LIGHTNING_TALK",
+    speaker: 3,
+    participants: "21, 25, 14, 19, 48, 13, 31, 15, 16, 35, 41, 29, 46",
+  },
+  {
+    id: 13,
+    title: "bibendum sed,",
+    abstract:
+      "eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus et magnis dis parturient montes,",
+    start: "2021-06-22 23:38:05",
+    duration: 60,
+    type: "LIGHTNING_TALK",
+    speaker: 6,
+    participants: "15, 31, 14, 13, 22, 19, 11, 44, 40, 42, 17, 34, 30, 49",
+  },
+  {
+    id: 14,
+    title: "amet, faucibus ut,",
+    abstract:
+      "eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam",
+    start: "2021-06-22 06:17:53",
+    duration: 90,
+    type: "LIGHTNING_TALK",
+    speaker: 8,
+    participants: "26, 22, 30, 41, 18, 13, 39, 28, 47, 48",
+  },
+  {
+    id: 15,
+    title: "massa. Suspendisse",
+    abstract:
+      "dui, in sodales elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla",
+    start: "2021-06-23 21:05:00",
+    duration: 60,
+    type: "LIGHTNING_TALK",
+    speaker: 3,
+    participants:
+      "28, 27, 38, 26, 50, 19, 42, 22, 13, 12, 36, 39, 35, 40, 47, 29, 17",
+  },
+  {
+    id: 16,
+    title: "Nulla tincidunt, neque",
+    abstract:
+      "risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris,",
+    start: "2021-06-21 22:16:00",
+    duration: 45,
+    type: "WORKSHOP",
+    speaker: 2,
+    participants: "22, 43, 41, 33, 14, 29, 45, 16, 50, 36, 12, 15",
+  },
+  {
+    id: 17,
+    title: "eu enim. Etiam",
+    abstract:
+      "nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim,",
+    start: "2021-06-24 14:19:15",
+    duration: 45,
+    type: "PRESENTATION",
+    speaker: 2,
+    participants:
+      "47, 15, 48, 35, 41, 28, 12, 50, 38, 16, 39, 22, 32, 33, 13, 31, 17, 30",
+  },
+  {
+    id: 18,
+    title: "varius orci,",
+    abstract:
+      "magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies",
+    start: "2021-06-24 04:30:24",
+    duration: 90,
+    type: "PRESENTATION",
+    speaker: 2,
+    participants: "20, 43, 29, 24, 30, 48, 31, 18, 50, 44, 32, 46",
+  },
+  {
+    id: 19,
+    title: "felis eget varius ultrices,",
+    abstract:
+      "eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula",
+    start: "2021-06-23 06:11:44",
+    duration: 45,
+    type: "PRESENTATION",
+    speaker: 9,
+    participants: "39, 19, 41, 12, 31, 14, 28, 11, 47, 21, 50, 26, 35, 23",
+  },
+  {
+    id: 20,
+    title: "magna. Nam",
+    abstract:
+      "cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est",
+    start: "2021-06-24 18:16:44",
+    duration: 60,
+    type: "PRESENTATION",
+    speaker: 1,
+    participants:
+      "46, 11, 24, 47, 16, 49, 17, 42, 23, 43, 14, 22, 29, 38, 19, 33, 36, 48, 32",
+  },
 ];
 
 const talks = () => rawTalks;
 const setTalks = (newTalks) => {
-    rawTalks = [...newTalks];
-    return rawTalks;
+  rawTalks = [...newTalks];
+  return rawTalks;
 };
 
 export { talks, setTalks };
