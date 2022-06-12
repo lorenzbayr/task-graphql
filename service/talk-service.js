@@ -1,11 +1,19 @@
 import { setTalks, talks } from "../data/talk.js";
 import { users } from "../data/user.js";
 import { feedbacks } from "../data/feedback.js";
+import { comments } from "../data/comment.js";
 
 const getTalk = (id) => talks().find((t) => t.id == id);
 
-const getTalks = () => {
-  return talks();
+const getTalks = (filter) => {
+  let result = talks();
+  if (filter) {
+    const { type } = filter;
+    if (type) {
+      result = result.filter((r) => r.type === type);
+    }
+  }
+  return result;
 };
 
 const createTalk = (data) => {
@@ -50,6 +58,8 @@ const getTalkRating = (id) => {
   return list.reduce((a, r) => a + r, 0) / list.length;
 };
 
+const getTalkComments = (id) => comments().filter((c) => c.talk == id);
+
 export {
   getTalk,
   getTalks,
@@ -60,4 +70,5 @@ export {
   getParticipants,
   getFeedback,
   getTalkRating,
+  getTalkComments,
 };

@@ -15,11 +15,19 @@ import {
   getTalk,
   getFeedback,
   getTalkRating,
+  getTalkComments,
 } from "./service/talk-service.js";
 import {
   getFeedbackTalk,
   getFeedbackUser,
 } from "./service/feedback-service.js";
+import {
+  getCommentAnswerTo,
+  getCommentAuthor,
+  getCommentResponses,
+  getTCommentTalk,
+  getThumbsUpBy
+} from "./service/comment.service.js";
 
 const pubSub = new PubSub();
 const CURRENT_TALK_UPDATED = "CURRENT_TALK_UPDATED";
@@ -31,20 +39,28 @@ const resolvers = {
     speaker: (parent) => getSpeaker(parent.speaker),
     participants: (parent) => getParticipants(parent.participants),
     feedback: (parent) => getFeedback(parent.id),
-    rating: (parent) => getTalkRating(parent.id),
+    averageRating: (parent) => getTalkRating(parent.id),
+    comments: (parent) => getTalkComments(parent.id),
   },
   User: {
-    speaksAt: (parent) => getTalksUserSpeaksAt(parent.id),
+    speaksAt: (parent, { filter }) => getTalksUserSpeaksAt(parent.id, filter),
     participates: (parent) => getTalksUserParticipatesAt(parent.id),
   },
   Feedback: {
-    user: (parent) => getFeedbackUser(parent.id),
+    author: (parent) => getFeedbackUser(parent.id),
     talk: (parent) => getFeedbackTalk(parent.id),
+  },
+  Comment: {
+    author: (parent) => getCommentAuthor(parent.author),
+    thumbsUpBy: (parent) => getThumbsUpBy(parent.thumbsUpBy),
+    talk: (parent) => getTCommentTalk(parent.talk),
+    answerTo: (parent) => getCommentAnswerTo(parent.answerTo),
+    responses: (parent) => getCommentResponses(parent.id)
   },
   Query: {
     readUser: (_, { id }) => getUser(id),
     readUsers: () => getUsers(),
-    readTalks: () => getTalks(),
+    readTalks: (_, { filter }) => getTalks(filter),
     readTalk: (_, { id }) => getTalk(id),
     readCurrentTalk: () => currentTalk,
   },

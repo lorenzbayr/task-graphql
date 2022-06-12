@@ -41,10 +41,10 @@ async function startApolloServer(typeDefs, resolvers) {
   await server.start();
   server.applyMiddleware({ app });
 
-  const PORT = 4000;
+  const port = process.env.PORT || 4000;
 
-  httpServer.listen(PORT, () => {
-    console.log(`Server is now listening on http://localhost:${PORT}`);
+  httpServer.listen(port, () => {
+    console.log(`Server is now listening on http://localhost:${port}`);
   });
 }
 

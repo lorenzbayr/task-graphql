@@ -15,11 +15,15 @@ const typeDefs = gql`
     abstract: String
     start: Date
     duration: Int
-    rating: Float
+    averageRating: Float
     type: TypeOfTalk
     speaker: User
     participants: [User]
     feedback: [Feedback]
+    """
+    TODO
+    """
+    comments: [Comment]
   }
 
   input TalkCreateInput {
@@ -36,6 +40,9 @@ const typeDefs = gql`
     duration: Int
     type: TypeOfTalk
   }
+  input TalkFilterInput {
+    type: TypeOfTalk
+  }
 
   type User {
     id: ID
@@ -43,31 +50,61 @@ const typeDefs = gql`
     surname: String
     birthday: Date
     email: String
-    speaksAt: [Talk]
-    participates: [Talk]
+    speaksAt(filter: TalkFilterInput): [Talk]
+    participates(filter: TalkFilterInput): [Talk]
+    """
+    TODO
+    """
+    gaveFeedback: [Feedback]
+    """
+    TODO
+    """
+    comments: [Comment]
   }
 
   type Feedback {
     id: ID
     rating: Float!
     content: String
-    user: User
+    author: User
     talk: Talk
   }
 
+  type Comment {
+    id: ID!
+    content: String!
+    author: User!
+    thumbsUpBy: [User]
+    """
+    TODO
+    """
+    talk: Talk
+    """
+    TODO
+    """
+    answerTo: Comment
+    """
+    TODO
+    """
+    responses: [Comment]
+  }
+
   type Query {
-    readUser(id: ID): User
+    readUser(id: ID!): User
     readUsers: [User]
-    readTalk(id: ID): Talk
-    readTalks: [Talk]
-    readCurrentTalk: String
+    readTalk(id: ID!): Talk
+    readTalks(filter: TalkFilterInput): [Talk]
+    readCurrentTalk: String!
   }
 
   type Mutation {
-    createTalk(data: TalkCreateInput): Talk
-    updateTalk(id: ID, data: TalkUpdateInput): Talk
-    deleteTalk(id: ID): Talk
-    updateCurrentTalk(newTalk: String): String
+    """
+    Create a new Talk
+    """
+    createTalk(data: TalkCreateInput!): Talk
+    updateTalk(id: ID!, data: TalkUpdateInput!): Talk
+    deleteTalk(id: ID!): Talk
+    updateCurrentTalk(newTalk: String!): String!
   }
 
   type Subscription {

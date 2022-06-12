@@ -5,7 +5,17 @@ const getUser = (id) => users().find((u) => u.id == id);
 
 const getUsers = () => users();
 
-const getTalksUserSpeaksAt = (id) => talks().filter((t) => t.speaker === id);
+const getTalksUserSpeaksAt = (id, filter) => {
+  console.log(filter);
+  let result = talks().filter((t) => t.speaker === id);
+  if (filter) {
+    const { type } = filter;
+    if (type) {
+      result = result.filter((r) => r.type === type);
+    }
+  }
+  return result;
+};
 
 const getTalksUserParticipatesAt = (id) =>
   talks().filter((t) => {

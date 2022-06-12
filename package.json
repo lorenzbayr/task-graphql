@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server.js"
+    "serve": "env-cmd nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,11 @@
     "graphql": "^16.5.0",
     "graphql-subscriptions": "^2.0.0",
     "graphql-ws": "^5.8.2",
-    "prettier": "^2.6.2",
     "ws": "^8.7.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
   }
 }
